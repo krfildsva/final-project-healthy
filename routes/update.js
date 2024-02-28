@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const multer = require('multer');
 const cloudinary = require('cloudinary').v2;
-const Image = require('../models/image');
+const Image = require('../models/Image');
 const User = require('../models/user.js');
 
 
