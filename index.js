@@ -6,7 +6,7 @@ require('dotenv').config();
 const bcrypt = require("bcrypt")
 const session = require("express-session")
 const mongoose = require('mongoose');
-const Image = require('./models/image');
+const Image = require('../models/Image');
 
 
 const cookieParser = require('cookie-parser');
