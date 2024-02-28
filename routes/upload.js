@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const crypto = require('crypto');
 const path = require('path');
 const cloudinary = require('cloudinary').v2;
-const Image = require('../models/image');
+const Image = require('../models/Image');
 
 const router = express.Router();
 const upload = multer({ dest: 'temp/' });
