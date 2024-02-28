@@ -9,7 +9,7 @@ const isAuthenticated = (req, res, next) => {
     }
 };
 const User = require('../models/user.js');
-const Image = require('../models/image');
+const Image = require('../models/Image');
 
 
 router.get('/', isAuthenticated, async(req, res) => {
