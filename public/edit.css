@@ -1,0 +1,53 @@
+body{
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+.container{
+    background-color: #bee2f4;
+    color: white;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 25px;;
+}
+.container-md{
+  color: white;
+  background-color: #7bcff9;
+  padding: 20px;
+  margin:30px;
+  border-radius: 25px;
+}
+
+.food-photo{
+  border-radius: 25px;}
+
+.carousel-inner > .item > img {
+    height:50px;
+  }
+
+.btn-light {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+  }
+.btn-light input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      font-size: 100px;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      cursor: inherit;
+      display: block;
+  }
+
+  .btn-danger{
+    margin: 10px;
+  }
+
+  footer{
+    padding:15px;
+  }
