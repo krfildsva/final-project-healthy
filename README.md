@@ -1,0 +1,1 @@
+npm install express mongoose nodemon express bcrypt express-session body-parser ejs request cors path socket.io
