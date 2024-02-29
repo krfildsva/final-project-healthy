@@ -3,8 +3,8 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const multer = require('multer');
 const cloudinary = require('cloudinary').v2;
-const Image = require('../models/Image');
-const User = require('../models/user.js');
+const Image = require('../models/Image.js');
+const User = require('../models/User.js');
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
