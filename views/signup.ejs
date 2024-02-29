@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Starter Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup">Sign up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+        </ul>
+    </div>
+        </div>
+    </nav>
+  <div class="login-form">
+    <h1 class="login-text">Sign up</h1>
+    <form action="/signup" method="POST">
+        <div class="row">
+            <div class="col">
+                <label for="email" class="login-text">Email:</label>
+            </div>
+            <div class="col">
+                <input type="email" id="email" name="email" class="login-username" required placeholder="Email">
+                <% if (emailError) { %>
+                <p class="error-message"><%= emailError %></p>
+                <% } %>
+
+                <% if (passError) { %>
+                <p class="error-message"><%= passError %></p>
+                <% } %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="password" class="login-text">Password:</label>
+            </div>
+            <div class="col">
+                <input type="password" id="password" name="password" class="login-username" placeholder="Enter your passwor" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="username" class="login-text">Username:</label>
+            </div>
+            <div class="col">
+                <input type="text" id="username" name="username" placeholder="Enter your username" class="login-username" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="firstName" class="login-text">First Name:</label>
+            </div>
+            <div class="col">
+                <input type="text" id="firstName" name="first_name" placeholder="Enter your first name" class="login-username" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="lastName" class="login-text">Last Name:</label>
+            </div>
+            <div class="col">
+                <input type="text" id="lastName" name="last_name" placeholder="Enter your last name" class="login-username" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="age" class="login-text">Age:</label>
+            </div>
+            <div class="col">
+                <input type="number" id="age" name="age" placeholder="Enter your age" class="login-username" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="country" class="login-text">Country:</label>
+            </div>
+            <div class="col">
+                <input type="text" id="country" name="country" placeholder="Enter your country" class="login-username" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="gender" class="login-text">Gender:</label>
+            </div>
+            <div class="col">
+                <select id="gender" name="gender" class="login-username" required>
+                    <option value="" class="login_option">Select your gender</option>
+                    <option value="male" class="login_option">Male</option>
+                    <option value="female" class="login_option">Female</option>
+                    <option value="other" class="login_option">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="login-submit">Sign up</button>
+            </div>
+        </div>
+    </form>
+    <div class="underlay-photo"></div>
+    <div class="underlay-black"></div>
+</div>
+<footer class="text-center text-lg-start bg-body-tertiary text-muted fixed-bottom">
+    <div class="container-sm">
+    <h5>Saltanat Korfildesova</h5>
+    <h5>IT-2204</h5>
+</div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

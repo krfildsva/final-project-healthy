@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/edit.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Starter Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">Sign up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dashboard">Main Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/nutrition">Nutrition</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/recipes">Recipes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-md">
+  <h1>Search for Recipes</h1>
+  <form action="/recipes/search" method="POST">
+      <input type="text" name="query" class="form-control" required>
+      <button type="submit" class="btn btn-light">Search</button>
+  </form>
+  </div>
+  <div class="container-md">
+  <% if(recipes) { %>
+      <% recipes.forEach(function(recipe) { %>
+          <div>
+            <hr>
+              <h2><%= recipe.recipe.label %></h2>
+              <p>Calories: <%= Math.round(recipe.recipe.calories) %></p>
+              <img src="<%= recipe.recipe.image %>" class="food-photo" alt="<%= recipe.recipe.label %>">
+              <a href="<%= recipe.recipe.url %>" target="_blank" class="btn btn-light">Recipe Link</a>
+          </div>
+      <% }) %>
+  <% } else if(error) { %>
+      <p>Error: <%= error %></p>
+  <% } %>
+</div>
+<footer class="text-center text-lg-start bg-body-tertiary text-muted fixed-bottom">
+    <div class="container-sm">
+    <h5>Saltanat Korfildesova</h5>
+    <h5>IT-2204</h5>
+</div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
