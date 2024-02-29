@@ -8,8 +8,8 @@ const isAuthenticated = (req, res, next) => {
         //res.redirect('/login'); 
     }
 };
-const User = require('../models/user.js');
-const Image = require('../models/Image');
+const User = require('../models/User.js');
+const Image = require('../models/Image.js');
 
 
 router.get('/', isAuthenticated, async(req, res) => {
