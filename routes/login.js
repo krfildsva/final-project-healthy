@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-const User = require('../models/user.js');
+const User = require('../models/User.js');
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
